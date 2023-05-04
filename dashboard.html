@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borno State Multisectoral Crisis Recovery Project</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.0/chart.min.js" 
+    integrity="sha512-qKyIokLnyh6oSnWsc5h21uwMAQtljqMZZT17CIMXuCQNIfFSFF4tJdMOaJHL9fQdJUANid6OB6DRR0zdHrbWAw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js" integrity="sha512-JPcRR8yFa8mmCsfrw4TNte1ZvF1e3+1SdGMslZvmrzDYxS69J7J49vkFL8u6u8PlPJK+H3voElBtUCzaXj+6ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <img src="assets/imgs/AF Logo.png">
+                        </span>
+                        <span class="title">Menu</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="projects.html">
+                        <span class="icon">
+                            <ion-icon name="list-outline"></ion-icon>
+                        </span>
+                        <span class="title">Projects</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="finances.html">
+                        <span class="icon">
+                            <ion-icon name="cash-outline"></ion-icon>
+                        </span>
+                        <span class="title">Budget</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gis.html">
+                        <span class="icon">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </span>
+                        <span class="title">Map</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="index.html">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="title">
+                        <h4>Borno State Multisectoral Crisis Recovery Project</h4>
+                        <h6>Management Information System</h6><br>
+                        <h6 style="font-weight: 300; font-size: x-small;">*Data As At March 2023</h6>
+                    </div>
+
+                <div class="user">
+                    <img src="assets/imgs/AF Logo.png" alt="">
+                </div>
+            </div>
+
+            <!-- ======================= Cards ================== -->
+            <div class="cardBox">
+                <div class="card projcard">
+                    
+                    <div class="ssmargindivs">
+                        <div class="numbers totalnumber" >320</div>
+                        <div class="cardName totallabel"> PROJECTS </div>
+                    </div>
+                
+                    <div class="ssmargindivs">
+                        <div class="numbers">35</div>
+                        <div class="cardName ongoinglabel"> ONGOING </div>
+                    </div>
+
+                    <div class="ssmargindivs">
+                        <div class="numbers">285</div>
+                        <div class="cardName completedlabel"> COMPLETED </div>
+                    </div>
+
+                </div>
+
+                <div class="card">
+                    <div class="ssmargindivs">
+                        <div class="iconBx">
+                            <ion-icon name="happy-outline"></ion-icon>
+                        </div>
+                        <div class="numbers">2,411,865</div>
+                        <div class="cardName">Beneficiaries</div>
+                    </div>
+
+                    <div class="ssmargindivs">
+                        <div class="iconBx">
+                            <ion-icon name="school-outline"></ion-icon>
+                        </div>
+                        <div class="numbers">441,488</div>
+                        <div class="cardName">C1 Beneficiaries</div>
+                    </div>
+
+                    <div class="ssmargindivs">
+                        <div class="iconBx">
+                            <ion-icon name="business-outline"></ion-icon>
+                        </div>
+                        <div class="numbers">1,970,377</div>
+                        <div class="cardName">C2 Beneficiaries</div>
+                    </div>
+
+                    <div class="ssmargindivs">
+                        <div class="iconBx">
+                            <ion-icon name="happy-outline"></ion-icon>
+                        </div>
+                        <div class="numbers">4,000</div>
+                        <div class="cardName">LIPW</div>
+                    </div>
+            </div>
+                
+            </div>
+
+            <!-- =========== Middle Cards =========  -->
+            <div class="cardBox bottomCardbox">
+                <div class="card projcard">
+       
+                <canvas id="myChart"></canvas>
+
+                </div>
+
+                <div class="card" style="align-items: center;">
+                    
+                    <div class="ssmargindivs2">
+                        <canvas id="myChart3"></canvas><span style="margin-left: 35px;font-weight: 500;">Total Allocation</span>
+                        <br><br><span style="margin-left: 35px;font-weight: 300;">$148,381,009.47</span>
+                    </div>
+
+                    <div class="ssmargindivs">
+                        <br><br><div class="circular-progress circular-progress3">
+                            <div class="value-container value-container3">67%</div>
+                        </div><br><span style="margin-left: 35px;font-weight: 500;">Utilization</span>
+                        <br><br><span style="margin-left: 35px;font-weight: 300;">$99,105,367.14</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- =========== Progress Cards =========  -->
+
+            <div class="cardBox bottomCardbox">
+                <div class="card projcard"><span style="font-weight: 500;">Physical Progress :</span>
+                    
+                            <div class="ssmargindivs">
+            
+                                <div class="circular-progress">
+                                <div class="value-container">64%</div>
+                                </div><span style="margin-left: 1px;font-weight: 400;">C1 Projects</span>
+                            </div>
+                        
+                            <div class="ssmargindivs">
+                                <div class="circular-progress">
+                                <div class="value-container">89%</div>
+                                </div><span style="margin-left: 1px;font-weight: 400;">C2 Projects</span>
+                            </div>
+
+                    </div>
+
+                <div class="card projcard"><span style="font-weight: 500;">Financial Progress :</span>
+                    
+                    <div class="ssmargindivs2">
+                        <div class="progress">
+                            <div class="progressfill"></div>
+                            <span class="progressnumber">60%</span>
+                        </div>
+                        <div class="cardName" style="margin-left: 20px; font-size: larg; font-weight: 500;">Component 1</div>
+                    </div>
+                    
+                    <div class="ssmargindivs2">
+                        <div class="progress">
+                            <div class="progressfill"></div>
+                            <span class="progressnumber">68%</span>
+                        </div>
+                        <div class="cardName" style="margin-left: 20px; font-size: larg; font-weight: 500;">Component 2</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- =========== Bottom Cards =========  -->
+            <div class="cardBox bottomCardbox">
+               
+                <div class="card projcard">
+                    <iframe class="iframe" src="https://www.arcgis.com/apps/instant/basic/index.html?appid=10374a89a9394e4f80da93d482c28665" width="100%" height="400px" style="border: 0;" allowfullscreen="" loading=""></iframe>
+                </div>
+
+                <div class="card">
+                    
+                    <canvas id="myChart2"></canvas>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
