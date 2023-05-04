@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borno State Multisectoral Crisis Recovery Project</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/lightbox.min.css">
+    <script type="text/javascript" src="assets/js/lightbox-plus-jquery.min.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        var pdid2 = sessionStorage.getItem('pdid');
+    </script>
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <img src="assets/imgs/AF Logo.png">
+                        </span>
+                        <span class="title">Menu</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="projects.html">
+                        <span class="icon">
+                            <ion-icon name="list-outline"></ion-icon>
+                        </span>
+                        <span class="title">Projects</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="finances.html">
+                        <span class="icon">
+                            <ion-icon name="cash-outline"></ion-icon>
+                        </span>
+                        <span class="title">Budget</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gis.html">
+                        <span class="icon">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </span>
+                        <span class="title">Map</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="index.html">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="title">
+                        <h4>Borno State Multisectoral Crisis Recovery Project</h4>
+                        <h6>Management Information System</h6>
+                    </div>
+
+                <div class="user">
+                    <img src="assets/imgs/AF Logo.png" alt="">
+                </div>
+            </div>
+
+            <!-- ======================= Project Table ================== -->
+            <h2 id="data-display">Project Data</h2>
+             <br>
+
+             <div class="details projdatabox">
+                <div class="recentOrders projdatacard">
+
+                    <table class="projdatatable">
+                        <tbody>
+                        
+                        <tr>
+                            <td>Component</td>
+                            <td id="pcomponent">Component</td>
+                        </tr>
+                        <tr>
+                            <td>Sector</td>
+                            <td id="psector">Sector</td>
+                        </tr>
+                        <tr>
+                            <td>Name</td>
+                            <td id="pname">Project Name</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Cost $</td>
+                            <td id="pdollar">Cost Dollar</td>
+                        </tr>
+                        <tr>
+                            <td>Cost N</td>
+                            <td id="pnaira">Cost Naira</td>
+                        </tr>
+                        <tr>
+                            <td>LGA</td>
+                            <td id="plga">LGA</td>
+                        </tr>
+                        <tr>
+                            <td>Community</td>
+                            <td id="pcommunity">Community</td>
+                        </tr>
+                        <tr>
+                            <td>Target Beneficiaries</td>
+                            <td id="pbeneficiaries">Beneficiaries</td>
+                        </tr>
+                        <tr>
+                            <td>Implementing Agency</td>
+                            <td id="pagency">Implementing Agency</td>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td id="pstatus">Status</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+             </div>
+
+             <!-- ======================= Project Data Tabs ================== -->
+
+             <div class="details projdatabox">
+                <div class="recentOrders projdatacard3">
+
+                    <div class="tabs">
+
+                        <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
+                        <label for="tab1" class="tabs__label">Procurement</label>
+                        <div class="tabs__content">
+
+                            <table class="projdatatable2">
+
+                                <thead>
+                                    <tr>
+                                        <th>Procument Method</th>
+                                        <th>Procument Status</th>
+                                        <th>Contract No.</th>
+                                        <th>Contractor</th>
+                                        <th>Contract Award Date</th>
+                                        <th>Contract Acceptance Date</th>
+                                        <th>Contract Start Date</th>
+                                        <th>Contract Duration</th>
+                                    </tr>
+                                        </thead>
+        
+                                <tbody>
+                                <tr>
+                                    <td id="ppmethod">Procument Method</td>
+                                    <td id="pstatus">Procument Status</td>
+                                    <td id="pcontractno">Contract No.</td>
+                                    <td id="pcontractor">Contractor</td>
+                                    <td id="pcawd">Contract Award Date</td>
+                                    <td id="pcaccd">Contract Acceptance Date</td>
+                                    <td id="pcstrd">Contract Start Date</td>
+                                    <td id="pcdur">Contract Duration</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                        <input type="radio" class="tabs__radio" name="tabs-example" id="tab3">
+                        <label for="tab3" class="tabs__label">Safeguards</label>
+                        <div class="tabs__content">
+
+                            <table class="projdatatable2">
+
+                                <thead>
+                                    <tr>
+                                        <th>Screening Date</th>
+                                        <th>Assesement Category</th>
+                                        <th>WB OPs Triggered</th>
+                                        <th>Site Specific Instruments</th>
+                                        <th>Date of Disclosure</th>
+                                        <th>RAP</th>
+                                        <th>GRM</th>
+                                        <th>GBV</th>
+                                        <th>Labour Influx</th>
+                                    </tr>
+                                </thead>
+        
+                                <tbody>
+                                <tr>
+                                    <td id="sdate">Date</td>
+                                    <td id="scat">Category</td>
+                                    <td id="swops">None</td>
+                                    <td id="ssi">SSI</td>
+                                    <td id="sdod">Date</td>
+                                    <td id="srap">RAP</td>
+                                    <td id="sgrm">GRM</td>
+                                    <td id="sgbv">GBV</td>
+                                    <td id="sli">LI</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    
+                    </div>
+
+                </div>
+             </div>
+
+             <!-- ======================= Project Progress Data ================== -->
+
+             <div class="cardBox projdatabox2">
+                <div class="card projdatacard2">
+                    <div>
+                        <div class="circular-progress circular-progress4">
+                        <div  id="pprogress" class="value-container value-container4">%</div>
+                        </div><span style="margin-left: 10px;font-weight: 300;">Physical</span>
+                    </div>
+                    <div>
+                        <div class="circular-progress circular-progress4">
+                        <div  id="fprogress" class="value-container value-container4">%</div>
+                        </div><span style="margin-left: 10px;font-weight: 300;">Financial</span>
+                    </div>
+                    <div><br><br>
+                        <h5>Project Start Date : </h5><br>
+                        <h5  id="pcstrd2" style="font-weight: 300;">-</h5>
+                    </div>
+                    <div><br><br>
+                        <h5>Expected Date Completion : </h5><br>
+                        <h5 id="exdc" style="font-weight: 300;">-</h5>
+                    </div>
+                    <div style="margin-right: 10px;"><br><br>
+                        <h5 >Status : </h5><br>
+                        <h5 id="pstatus2" style="font-weight: 300;">-</h5>
+                    </div>
+                    <div><br><br>
+                        <h5>Actual Date of Completion : </h5><br>
+                        <h5 id="adc" style="font-weight: 300;">-</h5>
+                    </div>
+                </div>
+                </div>
+
+                <div class="gallery">
+                    <a id="img1" data-lightbox="mygallery"><img id="imgb1"></a>
+                    <a id="img2" data-lightbox="mygallery"><img id="imgb2"></a>
+                    <a id="img3" data-lightbox="mygallery"><img id="imgb3"></a>
+                    <a id="img4" data-lightbox="mygallery"><img id="imgb4"></a>
+                    <a id="img5" data-lightbox="mygallery"><img id="imgb5"></a>
+                </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+  import { getDatabase, set, ref ,push, child, onValue} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const config = {
+    apiKey: "AIzaSyC6DSa956w7KaxfcV0837lzllZQJW0Tazo",
+    authDomain: "mcrpmis.firebaseapp.com",
+    databaseURL: "https://mcrpmis-default-rtdb.firebaseio.com",
+    projectId: "mcrpmis",
+    storageBucket: "mcrpmis.appspot.com",
+    messagingSenderId: "400602189174",
+    appId: "1:400602189174:web:ffa531c1863b27ad5b7e57",
+    measurementId: "G-XVKK1CFXS2"
+  };
+
+  firebase.initializeApp(config);
+
+// Get a reference to the database service
+var database = firebase.database();
+
+// Define the ID to retrieve data for
+var idToRetrieve = pdid2;
+
+// Get a reference to the data you want to retrieve
+var dataRef = firebase.database().ref('MMCJEREProjects/' + idToRetrieve);
+
+// Create an object to store the retrieved data
+var retrievedData = {};
+
+// Retrieve the data
+dataRef.once('value').then(function(snapshot) {
+  snapshot.forEach(function(childSnapshot) {
+    var key = childSnapshot.key;
+    var childData = childSnapshot.val();
+    retrievedData[key] = childData;
+    
+});
+
+   // Display the retrieved data on the HTML page
+   document.getElementById("pname").innerHTML = retrievedData["ProjectName"];
+   document.getElementById("adc").innerHTML = retrievedData["Actual_Date_of_Completion"];
+   document.getElementById("pagency").innerHTML = retrievedData["Agency"];
+   document.getElementById("scat").innerHTML = retrievedData["Assessment_Category"];
+   document.getElementById("pbeneficiaries").innerHTML = retrievedData["Beneficiaries"];
+   document.getElementById("pcommunity").innerHTML = retrievedData["Community"];
+   document.getElementById("pcomponent").innerHTML = retrievedData["Component"];
+   document.getElementById("pcaccd").innerHTML = retrievedData["Contract_Acceptance_Date"];
+   document.getElementById("pcawd").innerHTML = retrievedData["Contract_Award_Date"];
+   document.getElementById("pcontractno").innerHTML = retrievedData["Contract_No"];
+   document.getElementById("pcstrd").innerHTML = retrievedData["Contract_Start_Date"];
+   document.getElementById("pdollar").innerHTML = retrievedData["Cost_D"];
+   document.getElementById("pnaira").innerHTML = retrievedData["Cost_N"];
+   document.getElementById("sdod").innerHTML = retrievedData["Date_of_Disclosure"];
+   document.getElementById("pcdur").innerHTML = retrievedData["Duration"];
+   document.getElementById("exdc").innerHTML = retrievedData["Expected_Date_of_Completion"];
+   document.getElementById("fprogress").innerHTML = retrievedData["Financial_Progress"];
+   document.getElementById("pprogress").innerHTML = retrievedData["Physical_Progress"];
+   document.getElementById("plga").innerHTML = retrievedData["LGA"];
+   document.getElementById("swops").innerHTML = retrievedData["OPs_Triggered"];
+   document.getElementById("ppmethod").innerHTML = retrievedData["Proc_Method"];
+   document.getElementById("pstatus").innerHTML = retrievedData["Proc_Status"];
+   //document.getElementById("pdescription").innerHTML = retrievedData["Project_Description"];
+   document.getElementById("ssi").innerHTML = retrievedData["SSI"];
+   document.getElementById("sdate").innerHTML = retrievedData["Screening_Date"];
+   document.getElementById("psector").innerHTML = retrievedData["Sector"];
+   document.getElementById("pstatus").innerHTML = retrievedData["Status"];
+   document.getElementById("pcstrd2").innerHTML = retrievedData["Contract_Start_Date"];
+   document.getElementById("pstatus2").innerHTML = retrievedData["Status"];
+   
+   var Pic1 = retrievedData["Pic1"];
+   var Pic2 = retrievedData["Pic2"];
+   var Pic3 = retrievedData["Pic3"];
+   var Pic4 = retrievedData["Pic4"];
+   var Pic5 = retrievedData["Pic5"];
+   
+   document.getElementById("img1").setAttribute("href",Pic1);
+   document.getElementById("imgb1").setAttribute("src",Pic1);
+   document.getElementById("img2").setAttribute("href",Pic2);
+   document.getElementById("imgb2").setAttribute("src",Pic2);
+   document.getElementById("img3").setAttribute("href",Pic3);
+   document.getElementById("imgb3").setAttribute("src",Pic3);
+   document.getElementById("img4").setAttribute("href",Pic4);
+   document.getElementById("imgb4").setAttribute("src",Pic4);
+   document.getElementById("img5").setAttribute("href",Pic5);
+   document.getElementById("imgb5").setAttribute("src",Pic5);
+
+});
+    
+</script>

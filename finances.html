@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borno State Multisectoral Crisis Recovery Project</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.0/chart.min.js" 
+    integrity="sha512-qKyIokLnyh6oSnWsc5h21uwMAQtljqMZZT17CIMXuCQNIfFSFF4tJdMOaJHL9fQdJUANid6OB6DRR0zdHrbWAw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js" integrity="sha512-JPcRR8yFa8mmCsfrw4TNte1ZvF1e3+1SdGMslZvmrzDYxS69J7J49vkFL8u6u8PlPJK+H3voElBtUCzaXj+6ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Component 1',     25797771.58],
+          ['Component 2',      122583237.88]
+        ]);
+
+        var options = {
+          //title: 'My Daily Activities'
+          //legend: {position: 'none'},
+          pieSliceText: 'none'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <img src="assets/imgs/AF Logo.png">
+                        </span>
+                        <span class="title">Menu</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="projects.html">
+                        <span class="icon">
+                            <ion-icon name="list-outline"></ion-icon>
+                        </span>
+                        <span class="title">Projects</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="finances.html">
+                        <span class="icon">
+                            <ion-icon name="cash-outline"></ion-icon>
+                        </span>
+                        <span class="title">Budget</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gis.html">
+                        <span class="icon">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </span>
+                        <span class="title">Map</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="index.html">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="title">
+                        <h4>Borno State Multisectoral Crisis Recovery Project</h4>
+                        <h6>Management Information System</h6>
+                    </div>
+
+                <div class="user">
+                    <img src="assets/imgs/AF Logo.png" alt="">
+                </div>
+            </div>
+
+            <!-- ======================= Table ================== -->
+            <h2>Project Finance Data</h2>
+             <br>
+
+             <div class="cardBox budgetbox">
+                <div class="card budgetcard">
+                    
+                    <div id="piechart" style="width: 700px; height: 300px;"></div>
+                    
+                    <div>
+                        <span style="margin-left: 35px;font-weight: 500;">Total Allocation</span>
+                        <br><span style="margin-left: 35px;font-weight: 700;font-size: x-large;">$148,381,009.47</span>
+
+                        <br><br><br><span style="margin-left: 35px;font-weight: 500;">Total Utilization</span>
+                        <br><span style="margin-left: 35px;font-weight: 700;font-size: x-large;">$99,105,367.14</span>
+
+                        <br><br><br><span style="margin-left: 35px;font-weight: 500;">Total Balance</span>
+                        <br><span style="margin-left: 35px;font-weight: 700;font-size: x-large;">$49,275,642.33</span>
+                    </div>
+
+                    <div>
+                        <div class="circular-progress circular-progress3">
+                            <div class="value-container value-container3">67%</div>
+                    </div>
+
+                </div>
+                </div>
+         </div>
+
+         <!-- ======================= Budget Projects Table ================== -->
+         <br><br><br><h3>ALLOCATION, COMMITMENT AND UTILIZATION</h3><br>
+             <div class="tablediv" style="height:350px;overflow:auto;">
+
+                <table class="table">
+            
+                <thead>
+			<tr>
+				<th>Component</th>
+                <th>Allocation</th>
+				<th>Commitment</th>
+				<th>Utilization</th>
+                <th>Utilization Percentage</th>
+				<th>Balance</th>
+				<!--<th>Projects</th>-->
+			</tr>
+		        </thead>
+
+                <tbody>
+                <tr>
+                    <td>Component 1</td>
+                    <td>25,797,771.58</td>
+                    <td>17,557,311.80</td>
+                    <td>15,439,401.4</td>
+                    <td>88%</td>
+                    <td>2,117,910.76</td>
+                    <!--<td><a href="c1projectsfinances.html">Projects</a></td>-->
+                </tr>
+
+                <tr>
+                    <td>Component 2</td>
+                    <td>122,583,237.88</td>
+                    <td>107,206,891.90</td>
+                    <td>83,665,966.11</td>
+                    <td>78%</td>
+                    <td>23,540,925.79</td>
+                    <!--<td><a href="c2projectsfinances.html">Projects</a></td>-->
+                </tr>
+
+                </tbody>
+
+            </table>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
