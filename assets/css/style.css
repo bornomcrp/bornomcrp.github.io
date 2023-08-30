@@ -305,6 +305,27 @@ body {
   text-align: center;
 }
 
+/* LIPW Cards */
+.cardBoxlipw {
+  position: relative;
+  width: 100%;
+  padding: 15px;
+  display:grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 20px;
+}
+
+.cardBoxlipw .card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.592);
+  padding: 15px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
 /*.cardBox .card:hover {
   background: var(--blue);
 }
