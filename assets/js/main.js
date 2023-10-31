@@ -92,7 +92,7 @@ var data = {
       {
           label: "Allocation",
           backgroundColor: "#0095ffd5",
-          data: [25797771.58,122583237.88],
+          data: [26109002.45,123059237.88],
           datalabels:{
             anchor:'end',
             align:'top',
@@ -100,9 +100,9 @@ var data = {
           }
       },
       {
-          label: "Utilization",
+          label: "Commitment",
           backgroundColor:"#02d34b",
-          data: [15439401.04,83665966.10],
+          data: [24234930.71,119990599.06],
           datalabels:{
             anchor:'end',
             align:'top',
