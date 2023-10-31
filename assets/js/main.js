@@ -30,7 +30,7 @@ toggle.onclick = function () {
         {
             label: "Total",
             backgroundColor: "#0095ffd5",
-            data: [45,320],
+            data: [92,320],
             datalabels:{
               anchor:'end',
               align:'top',
@@ -40,7 +40,7 @@ toggle.onclick = function () {
         {
             label: "Ongoing",
             backgroundColor:"orange",
-            data: [4,35],
+            data: [6,35],
             datalabels:{
               anchor:'end',
               align:'top',
@@ -50,7 +50,7 @@ toggle.onclick = function () {
         {
             label: "Completed",
             backgroundColor:"#02d34b",
-            data: [29,284],
+            data: [82,284],
             datalabels:{
               anchor:'end',
               align:'top',
