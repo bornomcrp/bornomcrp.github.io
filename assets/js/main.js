@@ -142,7 +142,7 @@ var myBarChart = new Chart(ctx2, {
       labels: ['Component 1', 'Component 2'],
       datasets: [{
         label: 'Allocation',
-        data: [25797771.58, 122583237.88],
+        data: [26109002.45, 123059237.88],
         borderWidth: 1
       }]
     },
