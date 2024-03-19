@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAMIMA e-HealthCare System</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.0/chart.min.js" 
+    integrity="sha512-qKyIokLnyh6oSnWsc5h21uwMAQtljqMZZT17CIMXuCQNIfFSFF4tJdMOaJHL9fQdJUANid6OB6DRR0zdHrbWAw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+
+        <!-- ========================= Header ==================== -->
+        <div class="main">
+            <div class="topbar" style="background-color: white; margin-top: 10px;">
+                <div class="toggle">
+                    <img width="160px" height="60px" src="assets/imgs/logo.png" alt="">
+                </div>
+
+                <div class="title">
+                        <h4 style="margin-right: 175px; color: #0C8311; font-size: 0.85rem;">MAMIMA e-HealthCare System</h4>
+                    </div>
+
+                <div class="user">
+                    <img src="assets/imgs/AF Logo.png" alt="">
+                </div>
+            </div>
+
+            <!-- ======================= Page ================== -->
+
+            <div style="text-align: center; margin-top: 20px;">
+                <h4>NEW PATIENT</h4>
+            </div><br>
+                <h4 style="text-align: center; font-weight: 400;">Personal Information</h4>
+            <br><br>
+            
+            <div>
+                <form>
+
+                    <div style="margin-left: 105px;">
+                        <label>PID :</label>
+                        &nbsp; &nbsp;
+                        <input id="pid" style="height: 35px; width: 250px; border-radius: 2.5px; font-size: medium; border-radius: 5px">
+                    </div><br>
+                    
+                    <div style="margin-left: 50px;">
+                        <label>First Name :</label>
+                        &nbsp; &nbsp;
+                        <input id="fname" style="height: 35px; width: 250px; border-radius: 2.5px; font-size: medium; border-radius: 5px">
+                    </div><br>
+    
+                    <div style="margin-left: 50px; margin-top: 10px;">
+                        <label>Last Name :</label>
+                        &nbsp; &nbsp;
+                        <input id="lname" style="height: 35px; width: 250px; border-radius: 2.5px; font-size: medium; border-radius: 5px">
+                    </div><br>
+    
+                    <div style="margin-left: 50px; margin-top: 10px;">
+                        <label>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Age :</label>
+                        &nbsp; &nbsp;
+                        <input id="age" type="number" style="height: 35px; width: 100px; border-radius: 2.5px; font-size: medium; border-radius: 5px;">
+                        &nbsp;&nbsp;<label>Years</label>
+                    </div><br>
+    
+                    <div style="margin-left: 50px; margin-top: 10px;">
+                        <label>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Gender :</label>
+                        &nbsp; &nbsp;
+                        <select  id="gender" style="width: 100px; height: 35px; border-radius: 5px;" name="Select">
+                            <option value="Gender"></option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div><br>
+    
+                    <div style="margin-left: 25px; margin-top: 10px;">
+                        <label>Marital Status :</label>
+                        &nbsp; &nbsp;
+                        <select id="mstatus" style="width: 100px; height: 35px; border-radius: 5px;" name="Select">
+                            <option value="Status"></option>
+                            <option value="Single">Single</option>
+                            <option value="Married">Married</option>
+                            <option value="Divorced">Divorced</option>
+                            <option value="Widowed">Widowed</option>
+                        </select>
+                    </div><br>
+    
+                    <div style="margin-left: 50px; margin-top: 10px;">
+                        <label>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Phone :</label>
+                        &nbsp; &nbsp;
+                        <input id="phone" type="number" style="height: 35px; width: 250px; font-size: medium; border-radius: 5px">
+                    </div>
+                
+    
+    
+    
+                </div><br><br>
+                <hr>
+    
+                <div>
+    
+                    <div style="text-align: center; margin-top: 20px;">
+                        <h4>HEALTH DATA</h4>
+                    </div><br>
+                        <h4 style="margin-left: 25px; font-weight: 400;">Present Complains :</h4>
+                        <br>
+                        <label style="margin-left: 10px;">1:</label>
+                        <input id="c1" style="height: 40px; width: 450px; font-size: medium; border-color: rgba(198, 200, 198, 0);">
+                        <hr style="width: 450px; margin-left: 25px;">
+    
+                        <br><br>
+                        <label style="margin-left: 10px;">2:</label>
+                        <input id="c2" style="height: 40px; width: 450px; font-size: medium; border-color: rgba(198, 200, 198, 0);">
+                        <hr style="width: 450px; margin-left: 25px;">
+    
+                        <br><br>
+                        <label style="margin-left: 10px;">3:</label>
+                        <input id="c3" style="height: 40px; width: 450px; font-size: medium; border-color: rgba(198, 200, 198, 0);">
+                        <hr style="width: 450px; margin-left: 25px;">
+    
+                        <br><br>
+                        <label style="margin-left: 10px;">4:</label>
+                        <input id="c4" style="height: 40px; width: 450px; font-size: medium; border-color: rgba(198, 200, 198, 0);">
+                        <hr style="width: 450px; margin-left: 25px;">
+    
+                        <br><br>
+                        <label style="margin-left: 10px;">5:</label>
+                        <input id="c5" style="height: 40px; width: 450px; font-size: medium; border-color: rgba(198, 200, 198, 0);">
+                        <hr style="width: 450px; margin-left: 25px;"><br>
+    
+                        <div style="margin-left: 50px; margin-top: 10px;">
+                            <label>Symptoms <br> Duration :</label>
+                            &nbsp; &nbsp;
+                            <input id="sd" type="number" style="height: 35px; width: 100px; border-radius: 2.5px; font-size: medium; border-radius: 5px;">
+                            &nbsp;&nbsp;<label>Days/Weeks/Months</label>
+                        </div><br><br>
+
+                        <div style="text-align: center; margin-top: 20px;">
+                            <h4>Vitals</h4>
+                        </div><br>
+
+                        <div style="margin-left: 50px; margin-top: 10px;">
+                            <label>Body Temperature :</label>
+                            &nbsp; &nbsp;
+                            <input id="bt" type="number" style="height: 35px; width: 100px; border-radius: 2.5px; font-size: medium; border-radius: 5px;">
+                        </div><br>
+
+                        <div style="margin-left: 105px; margin-top: 10px;">
+                            <label>Heart Rate :</label>
+                            &nbsp; &nbsp;
+                            <input id="hr" type="number" style="height: 35px; width: 100px; border-radius: 2.5px; font-size: medium; border-radius: 5px;">
+                        </div><br>
+
+                        <div style="margin-left: 75px; margin-top: 10px;">
+                            <label>Blood Pressure :</label>
+                            &nbsp; &nbsp;
+                            <input id="bp" type="number" style="height: 35px; width: 100px; border-radius: 2.5px; font-size: medium; border-radius: 5px;">
+                        </div><br><br>
+
+                        <div style="text-align: center; margin-top: 20px;">
+                            <h4>Medical History</h4>
+                        </div><br>
+
+                        <div style="margin-left: 25px; margin-top: 10px;">
+                            <label>Have You Undergone <br> Past Surgeries ?</label>
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <select id="q1" style="width: 100px; height: 35px; border-radius: 5px;" name="Select">
+                                <option value="YN"></option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div><br>
+
+                        <div style="margin-left: 55px;">
+                            <label>If Yes, What Type ?</label>
+                            &nbsp; &nbsp;
+                            <input id="q2" style="height: 35px; width: 250px; border-radius: 2.5px; font-size: medium; border-radius: 5px">
+                        </div><br>
+
+                        <div style="margin-left: 25px; margin-top: 10px;">
+                            <label>Are You Currently <br> Taking Any Medications ?</label>
+                            <select id="q3" style="width: 100px; height: 35px; border-radius: 5px;" name="Select">
+                                <option value="YN"></option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div><br>
+
+                        <div style="margin-left: 47px;">
+                            <label>If Yes, What Medic. ?</label>
+                            &nbsp; &nbsp;
+                            <input id="q4" style="height: 35px; width: 250px; border-radius: 2.5px; font-size: medium; border-radius: 5px">
+                        </div><br>
+
+                        <div style="margin-left: 20px;">
+                            <label>Family Medical History ?</label>
+                            &nbsp; &nbsp;
+                            <input id="q5" style="height: 35px; width: 250px; border-radius: 2.5px; font-size: medium; border-radius: 5px">
+                        </div><br><br><br>
+
+                        <hr><br>
+
+                        <div style="text-align: center; margin-top: 20px;">
+                            <h4>Basic Investigation</h4>
+                        </div><br>
+
+                        <label style="margin-left: 10px;">1:</label>
+                        <input id="i1" style="height: 40px; width: 450px; font-size: medium; border-color: rgba(198, 200, 198, 0);">
+                        <hr style="width: 450px; margin-left: 25px;">
+    
+                        <br><br>
+                        <label style="margin-left: 10px;">2:</label>
+                        <input id="i2" style="height: 40px; width: 450px; font-size: medium; border-color: rgba(198, 200, 198, 0);">
+                        <hr style="width: 450px; margin-left: 25px;">
+    
+                        <br><br>
+                        <label style="margin-left: 10px;">3:</label>
+                        <input id="i3" style="height: 40px; width: 450px; font-size: medium; border-color: rgba(198, 200, 198, 0);">
+                        <hr style="width: 450px; margin-left: 25px;">
+    
+                        <br><br>
+                        <label style="margin-left: 10px;">4:</label>
+                        <input id="i4" style="height: 40px; width: 450px; font-size: medium; border-color: rgba(198, 200, 198, 0);">
+                        <hr style="width: 450px; margin-left: 25px;"><br><br>
+
+    
+                </div></form><br><br>
+
+
+                <div style="text-align: center;">
+    
+                    <button class="bt" type="submit" id="submit" style="color: white;">Submit</button>
+    
+                </div>
+
+            
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+  import { getDatabase, set, ref ,push, child, onValue} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyC6DSa956w7KaxfcV0837lzllZQJW0Tazo",
+    authDomain: "mcrpmis.firebaseapp.com",
+    databaseURL: "https://mcrpmis-default-rtdb.firebaseio.com",
+    projectId: "mcrpmis",
+    storageBucket: "mcrpmis.appspot.com",
+    messagingSenderId: "400602189174",
+    appId: "1:400602189174:web:ffa531c1863b27ad5b7e57",
+    measurementId: "G-XVKK1CFXS2"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  
+  // Get a reference to the database service
+  const database = getDatabase(app);
+
+  // write data
+  submit.addEventListener('click',(e) => {
+
+    var pid = document.getElementById('pid').value;
+    var fname = document.getElementById('fname').value;
+    var lname = document.getElementById('lname').value;
+    var age = document.getElementById('age').value;
+    //var gender = document.getElementById('gender').value;
+    //var mstatus = document.getElementById('mstatus').value;
+    var phone = document.getElementById('phone').value;
+    var c1 = document.getElementById('c1').value;
+    var c2 = document.getElementById('c2').value;
+    var c3 = document.getElementById('c3').value;
+    var c4 = document.getElementById('c4').value;
+    var c5 = document.getElementById('c5').value;
+    var sd = document.getElementById('sd').value;
+    var bt = document.getElementById('bt').value;
+    var hr = document.getElementById('hr').value;
+    var bp = document.getElementById('bp').value;
+    //var q1 = document.getElementById('q1').value;
+    var q2 = document.getElementById('q2').value;
+    //var q3 = document.getElementById('q3').value;
+    var q4 = document.getElementById('q4').value;
+    var q5 = document.getElementById('q5').value;
+    var i1 = document.getElementById('i1').value;
+    var i2 = document.getElementById('i2').value;
+    var i3 = document.getElementById('i3').value;
+    var i4 = document.getElementById('i4').value;
+    
+    
+
+    if(pid==""){
+      alert('not saved, please enter a valid Patient ID');
+    }else{
+      set(ref(database, 'Mamima_Patients/' + pid), {
+    
+    PID: pid,
+    FName: fname,
+    LName: lname,
+    Age: age,
+    //Gender: gender,
+    //MStatus: mstatus,
+    Phone: phone,
+    C1: c1,
+    C2: c2,
+    C3: c3,
+    C4: c4,
+    C5: c5,
+    SD: sd,
+    BT: bt,
+    HR: hr,
+    BP: bp,
+    //Q1: q1,
+    //Q2: q2,
+    Q3: q3,
+    Q4: q4,
+    Q5: q5,
+    I1: i1,
+    I2: i2,
+    I3: i3,
+    I4: i4
+
+   });
+   alert('Success!');
+   window.location.href = 'fp4.html';
+    }
+   
+  });
+</script>
